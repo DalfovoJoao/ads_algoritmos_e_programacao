@@ -28,7 +28,7 @@ This web application is designed to practice programming logic while organizing 
 3. Install Flask:
 
    ```bash
-   python -m pip install flask
+   python -m pip install flask peewee
    ```
 
 4. Start the application:
