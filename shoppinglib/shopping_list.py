@@ -24,7 +24,7 @@ class ShoppingListManager:
         current_list = self.get_current_list()
 
         if not current_list:
-            raise Exception("Não foi criada lista de compras")
+            raise Exception("No shopping list has been created")
 
         item = Item.get_or_none(Item.bar_code == barcode)
 
