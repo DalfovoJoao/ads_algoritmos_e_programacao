@@ -27,7 +27,7 @@ def create_user():
 
         return redirect("/")
 
-    return "Usuário já existe"
+    return "User already exists"
 
 
 @app.route("/login", methods=["POST"])
@@ -39,7 +39,7 @@ def login():
     if system.validate_login(username, password):
         return redirect("/items")
 
-    return "Login inválido"
+    return "Invalid username or password"
 
 
 @app.route("/items")
