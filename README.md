@@ -1,55 +1,63 @@
-# ads_algoritmos_e_programacao
-# Sistema Web de Lista de Compras
-# Sobre o Projeto
+# Sistema Web de Lista de Compras 🛒
 
-- Este projeto foi desenvolvido como atividade prática da disciplina de Algoritmos e Programação.
-- O objetivo é aplicar, de forma progressiva, os conceitos fundamentais de lógica de programação no desenvolvimento de um sistema real.
-- O sistema consiste em uma aplicação web simples que permite:
-- Cadastro e login de usuários
-- Inserção de itens em uma lista de compras
-- Cálculo automático do valor total
-- Visualização organizada da lista
-- A infraestrutura web (frontend, comunicação com banco de dados e estrutura base do backend) será previamente preparada pelo professor.
-- Os alunos são responsáveis pela implementação da lógica do sistema.
+Projeto acadêmico da disciplina de **Algoritmos e Programação**, do curso de Análise e Desenvolvimento de Sistemas (ADS).
 
-# Objetivos Educacionais
+## Objetivo
 
-# Este projeto trabalha:
+Praticar lógica de programação e organização de código em uma aplicação de lista de compras.
 
-- Pensamento computacional
-- Estruturas de controle
-- Modularização
-- Vetores e matrizes
-- Validação de dados
-- Organização de código
-- Trabalho em equipe
+A estrutura web foi preparada pelo professor; o exercício propõe o desenvolvimento da lógica do sistema pelos alunos, em equipe.
 
-# Conceitos Aplicados
+## Tecnologias
 
-- Variáveis e tipos de dados
-- Operadores aritméticos e lógicos
-- Estruturas condicionais
-- Estruturas de repetição
-- Funções e modularização
-- Estruturas de dados (listas e matrizes)
+- Python
+- Flask
+- HTML
+- SQLite
 
-# Funcionalidades do Sistema
+## Funcionalidades presentes no código
 
-- [ ] Login básico de usuário
-- [ ] Inserção de itens com:
+- Páginas de cadastro e login;
+- Criação de listas de compras;
+- Inclusão de itens com nome, código de barras, preço e quantidade;
+- Visualização dos itens cadastrados;
+- Consulta de item por código de barras.
 
-  - [ ] Nome
-  - [ ] Preço
-  - [ ] Quantidade
-  - [ ] Cálculo automático de subtotal
-  - [ ] Cálculo do valor total da compra
-  - [ ] Validação de entradas inválidas
+## Como executar localmente
 
-# Organização
+1. Instale o **Python 3**.
+2. Baixe este repositório e abra a pasta no terminal.
+3. Instale o Flask:
 
-O projeto foi desenvolvido em grupos, estimulando:
+   ```bash
+   python -m pip install flask
+   ```
 
-- Comunicação técnica
-- Divisão de tarefas
-- Responsabilidade compartilhada
-- Postura profissional
+4. Execute:
+
+   ```bash
+   python server.py
+   ```
+
+5. No navegador, acesse `http://127.0.0.1:5000`.
+
+> Dependendo do seu ambiente, o comando pode ser `python3` em vez de `python`.
+
+## Organização
+
+- `main.py`: classe principal e regras da aplicação;
+- `server.py`: rotas Flask;
+- `shoppinglib/`: módulos de usuários, itens, listas e banco de dados;
+- `templates/`: páginas HTML;
+- `static/`: arquivos estáticos;
+- `main_not_send.py`: exercício alternativo de terminal, preservado como histórico de estudo.
+
+## Conceitos praticados
+
+Condições, funções, listas, módulos, entrada e validação de dados, rotas web e persistência em banco de dados.
+
+## Limitações
+
+Este repositório é um **projeto educacional**, não uma aplicação pronta para produção. A implementação atual precisa de melhorias em autenticação, gerenciamento de sessões, tratamento de erros e proteção das credenciais antes de qualquer uso real. Não utilize senhas reais ao testar.
+
+Os arquivos `.db` que já fazem parte do histórico devem ser conferidos antes de qualquer compartilhamento ou reutilização com dados reais.
