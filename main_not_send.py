@@ -15,11 +15,11 @@ class App:
 
     def register(self):
         while True:
-            login = input('Digite o nome do Usuário:\t')
+            login = input('Enter your username:\t')
             if user_exists(login):
-                print(f'Usuário {login} já existe')
+                print(f'User {login} already exists')
                 continue
-            password = input('Digite o password:\t')
+            password = input('Enter your password:\t')
             self.user = create_user(login, password)
             break
 
@@ -28,14 +28,14 @@ class App:
             login = input('Digite o nome do Usuário:\t')
             password = input('Digite o password:\t')
             if self.validate_login(login, password):
-                print(f'{self.user.username} logado com sucesso!')
-            print(f'Usuário ou Senha Inválidos')
+                print(f'{self.user.username} logged in successfully!')
+            print(f'Invalid username or password')
 
     def start(self):
         exit_app = False
         while not exit_app:
             if not self.user:
-                response = input('Cadastrar digite C\nLogin digite L\nSair digite S')
+                response = input('Register: C\nLogin: L\nExit: S')
                 if response.lower() == 'c':
                     self.register()
                 elif response.lower() == 'l':
@@ -43,9 +43,9 @@ class App:
                 elif response.lower() == 's':
                     exit_app = True
                 else:
-                    print(f'Você digitou {response}, digite uma das letras possíveis\n')
+                    print(f'You entered {response}; please choose an available option\n')
             else:
-                response = input('Deslogar digite d\nSair digite S')
+                response = input('Log out: D\nExit: S')
                 if response.lower() == 'd':
                     self.user = None
                 elif response.lower() == 's':
