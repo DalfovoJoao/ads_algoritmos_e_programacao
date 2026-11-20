@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
-    <title>Adicionar Item</title>
+    <title>Add Item</title>
 
     <link rel="stylesheet" href="/static/style.css">
 
@@ -15,31 +15,31 @@
 
 <div class="container">
 
-    <h2>Adicionar item</h2>
+    <h2>Add item</h2>
 
     <form action="/add_item" method="post">
 
-        <input id="name" name="name" placeholder="Nome do item">
+        <input id="name" name="name" placeholder="Item name">
 
-        <input id="barcode" name="barcode" placeholder="Código de barras">
+        <input id="barcode" name="barcode" placeholder="Barcode">
 
-        <input id="price" name="price" placeholder="Preço">
+        <input id="price" name="price" placeholder="Price">
 
-        <input id="quantity" name="quantity" placeholder="Quantidade">
+        <input id="quantity" name="quantity" placeholder="Quantity">
 
-        <button type="submit">Inserir item</button>
+        <button type="submit">Add item</button>
 
     </form>
 
     <br>
 
-    <button onclick="startScanner()">Ler código de barras</button>
+    <button onclick="startScanner()">Scan barcode</button>
 
     <div id="scanner" style="margin-top:20px;"></div>
 
     <br>
 
-    <a href="/items">Ver lista</a>
+    <a href="/items">View list</a>
 
 </div>
 
@@ -68,7 +68,7 @@ async function buscarProduto(barcode){
 
     }catch(error){
 
-        console.log("Erro ao buscar produto:", error)
+        console.log("Error fetching item:", error)
 
     }
 
